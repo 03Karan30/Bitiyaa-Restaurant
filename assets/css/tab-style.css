@@ -1,0 +1,240 @@
+/*======= Google fonts =======*/
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+
+:root {
+    --first-color: #2e2e41;
+    --second-color: #5b85ff;
+    --third-color: #434354;
+   
+    --gold-crayola: hsl(38, 61%, 73%);
+    --quick-silver: hsla(0, 0%, 65%, 1);
+    --davys-grey: hsla(30, 3%, 34%, 1);
+
+    --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+    --white-alpha-10: hsla(0, 0%, 100%, 0.1);
+    --black: hsla(0, 0%, 0%, 1);
+    --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+    --black-alpha-15: hsla(0, 0%, 0%, 0.15);
+
+    --text-color: #fff;
+    
+    --box-shadow: 0 5px 25px rgb(2, 2, 2, 0.1);
+    --text-shadow: 0 5px 25px rgb(2, 2, 2, 0.1);
+}
+                                            
+/*======= Main CSS =======*/
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} */
+
+section {
+    transition: 0.5s ease;
+}
+
+/* .main-container {
+    position: relative;
+} */
+
+/*======= Tab navigation bar =======*/
+
+.tab-nav-bar {
+    position: relative;
+    margin: 60px 10px 60px 10px;
+}
+
+.tab-navigation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.tab-menu {
+    color: var(--black);
+    list-style: none;
+    background: var(--gold-crayola);
+    max-width: 800px;
+    padding: 10px;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--gold-crayola);
+    /* border-radius: 50px; */
+    box-shadow: var(--box-shadow);
+    overflow-x: auto;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+.tab-menu.dragging {
+    scroll-behavior: unset;
+    cursor: grab;
+}
+
+.tab-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-btn {
+    color: var(--black);
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0 6px;
+    padding: 10px 20px ;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s ease;
+}
+
+.tab-menu.dragging .tab-btn {
+    pointer-events: none;    
+}
+
+.tab-btn:hover {
+    background-color: var(--black);
+    color: var(--text-color);
+    transform: scale(1.15);
+}
+
+.tab-btn.active {
+    background-color: var(--black);
+    color: var(--text-color);
+}
+
+.left-btn,
+.right-btn {
+    position: absolute;
+    color: var(--black);
+    font-size: 4rem;
+    padding: 20px;
+    cursor: pointer;
+    background: var(--gold-crayola);
+    border: solid 0px;
+    transition: .3s ease-in;
+}
+
+.left-btn {
+    display: none;
+    left: -80px;
+    transform: scale(.7);
+}
+
+.right-btn {
+    right: -80px;
+    transform: scale(.7);
+}
+
+.left-btn:hover,
+.right-btn:hover {
+    color: var(--text-color);
+    transform: scale(.6);
+}
+
+
+
+/*======= Tab content =======*/
+.tab-content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tab{
+    position: absolute;
+    content-visibility: hidden;
+    opacity: 0;
+}
+
+.tab.active{
+    content-visibility: visible;
+    opacity: 1;
+    transition: 1s ease;
+}
+
+.tab .img-card{
+    position: relative;
+    width: 450px;
+    max-width: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow); 
+}
+
+.tab .img-card img {
+    width: 100%;
+}
+
+.tab .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    gap: 30px;
+}
+
+
+
+
+/*======= Media queries (max-width: 1050px) =======*/
+@media screen and (max-width: 1050px) {
+    section {
+        margin: 0;
+    }
+
+    .tab-nav-bar {
+        margin: 40px 20px 40px 25px;
+    }
+
+    .tab {
+        padding: 15px 25px;
+    }
+
+    .tab-menu {
+        width: 600px;
+        transform: scale(.8);
+    }
+
+    .left-btn {
+        display: none;
+        left: -15px;
+        transform: scale(.5);
+    }
+    
+    .right-btn {
+        right: -15px;
+        transform: scale(.5);
+    }
+}
+
+
+@media screen and (max-width: 745px){
+    
+    .tab-menu {
+        max-width: 460px;
+        transform: scale(.75);
+    }
+    
+    .left-btn {
+        display: none;
+        left: -30px;
+        transform: scale(.5);
+    }
+    
+    .right-btn {
+        right: -30px;
+        transform: scale(.5);
+    }
+
+    
+
+}
