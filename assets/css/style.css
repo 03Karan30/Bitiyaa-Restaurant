@@ -260,8 +260,10 @@ line-height: var(--lineHeight-4);
 #REUSED STYLE
 \*-----------------------------------*/
 
-.container { padding-inline: 16px; 
-position: relative;}
+.container { 
+  padding-inline: 16px; 
+  position: relative;
+}
 
 .separator {
 width: 8px;
@@ -1492,22 +1494,6 @@ opacity: 1;
 visibility: visible;
 }
 
-/* @keyframes back-to-top {
-  0%{
-      transform: translateY(-.6rem);   
-  }
-  50%{
-      transform: translateY(.8rem);
-      transform: scale(120%);
-      opacity: .8;
-  }
-  100%{
-      transform: translateY(-.6rem);
-      
-  }
-} */
-
-
 
 
 
@@ -1918,7 +1904,7 @@ visibility: visible;
 :root {
 
   /**
-   * typography
+  * typography
    */
 
   --fontSize-title-2: 2.5rem;
@@ -1928,14 +1914,31 @@ visibility: visible;
 
 
 /**
- * REUSED STYLE
- */
+* REUSED STYLE
+*/
 
 .container,
 :is(.service, .event) .container {
   max-width: 1200px;
   width: 100%;
   margin-inline: auto;
+}
+
+
+.tab-content > .container,
+  :is(.service, .event) .tab-content > .container {
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-menu {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 
@@ -2055,6 +2058,20 @@ visibility: visible;
   margin-block-end: 55px;
 }
 
+.footer-menu > .container > .grid-list {
+  gap: 55px 80px;
+  margin-block-end: 55px;
+}
+
+
+/* 
+.input-wrapper.footer-btn {
+  margin-top: 0px;
+} */
+
+/* .footer-btn {
+  margin-top: 0px;
+} */
 
 
 /**
@@ -2152,11 +2169,7 @@ visibility: visible;
 
 
 
-
-
 /* ****************************************** M E N U *********************************************** */
-
-
 
 
 .menu-hero {
@@ -2187,37 +2200,6 @@ visibility: visible;
 .menu-headline{
   padding-top: 90px;
 }
-
-
-.content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* .tab-content {
-  height: 90vh;
-  overflow-y: scroll;
-} */
-
-/* .menu-container {
-  flex: 1;
- position: relative;
-}
-
-
-.tab {
-  display: none;
-  height: 100%;
-  overflow-y: auto;
-} */
-
-.menu-footer{
-  position: sticky;
-  bottom: 0;
-  top: 100%;
-}
-
 
  
 
