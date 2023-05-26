@@ -1496,6 +1496,106 @@ visibility: visible;
 
 
 
+/* ****************************************** M E N U *********************************************** */
+
+
+.menu-hero {
+  width: 100%;
+  height: 95vh;
+  background-image: url(../images/menu-images/menu-bg.png);
+}
+
+.menu-separator .my-hero-line{
+  max-width: 8.4rem;
+}
+
+.menu-hero .my-hero-container .btn {
+  margin-top: 4.8rem;
+}
+
+.Contact .container {
+  position: relative;
+}
+
+
+/* Tabs */
+
+.main-container {
+  position: relative;
+}
+
+.menu-headline{
+  padding-top: 90px;
+}
+
+ 
+
+/* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+
+
+.our-story {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../images/story-bg.png);
+  background-size: cover;
+}
+
+.story-banner > .w-100 { 
+  padding-inline-start: 50px; 
+  opacity: .9;
+  width: 120%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 450px;
+  }
+
+  .about-location {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-font-color-dark);
+    position: relative;
+    bottom: 50px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .location-content {
+    margin: 20px auto 70px;
+  }
+
+  .location-content h2 {
+    font-size: var(--fontSize-title-1);
+  }
+
+  .location-content p {
+    font-size: var(--fontSize-body-4);
+    color: var(--white-alpha-20);
+  }
+
+  .location-content .contact-number {
+    font-size: 20px;
+  }
+
+  .about-video {
+    transition: .6s linear infinite;
+    /* animation: video-animation 6s linear infinite alternate; */
+    border: var(--gold-crayola) 8px solid;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 3px;
+  }
+
+  .about-video:hover {
+    opacity: .8;
+    cursor: pointer;
+  }
+
+
 
 /*-----------------------------------*\
 #MEDIA QUERIES
@@ -1694,6 +1794,16 @@ visibility: visible;
   min-width: max-content;
 }
 
+.about-video {
+  position: relative;
+  top: 60px;
+  left: 35px;
+  margin-bottom: -120px;
+}
+
+.about-location {
+  flex-direction: column;
+}
 }
 
 
@@ -1888,6 +1998,33 @@ visibility: visible;
 
 .footer-list:last-child { order: 2; }
 
+
+.about-video{
+  transform: scale(.9);
+}
+.about .container{
+  margin-top: 60px;
+}
+
+.location-content {
+  transform: scale(1.26)
+}
+
+.first-content{
+  order: 1;
+}
+
+.second-content{
+  order: 3;
+}
+
+.third-content{
+  order: 2;
+}
+
+iframe {
+  height: 640px;
+}
 }
 
 
@@ -2063,17 +2200,6 @@ visibility: visible;
   margin-block-end: 55px;
 }
 
-
-/* 
-.input-wrapper.footer-btn {
-  margin-top: 0px;
-} */
-
-/* .footer-btn {
-  margin-top: 0px;
-} */
-
-
 /**
  * TESTIMONIALS
  */
@@ -2089,6 +2215,26 @@ visibility: visible;
  */
 
 .features .grid-list { grid-template-columns: repeat(4, 1fr); }
+
+
+.about-location {
+  flex-direction: row;
+}
+.first-content{
+  order: 1;
+}
+
+.second-content{
+  order: 2;
+}
+
+.third-content{
+  order: 3;
+}
+
+.about{
+  padding-top: 100px;
+}
 
 }
 
@@ -2165,43 +2311,62 @@ visibility: visible;
   left: 0;
 }
 
+.about-location {
+  flex-direction: row;
+}
+.first-content{
+  order: 1;
+}
+
+.second-content{
+  order: 2;
+}
+
+.third-content{
+  order: 3;
+}
+
+.about{
+  padding-top: 100px;
+}
+
 }
 
 
 
-/* ****************************************** M E N U *********************************************** */
+@media (max-width: 574px){
+  
+  /* .about-content {
+    width: 358px;
+    height: 510.812px;
+  } */
 
+  video {
+    width: 430px;
+    height: 280px;
+  }
 
-.menu-hero {
-  width: 100%;
-  height: 95vh;
-  background-image: url(../images/menu-images/menu-bg.png);
+  .about-video {
+    margin-bottom: -160px;
+  }
+
+  .about .container {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .about-location {
+    flex-direction: column;
+  }
+  .first-content{
+    order: 1;
+  }
+  
+  .second-content{
+    order: 3;
+  }
+  
+  .third-content{
+    order: 2;
+  }
 }
-
-.menu-separator .my-hero-line{
-  max-width: 8.4rem;
-}
-
-.menu-hero .my-hero-container .btn {
-  margin-top: 4.8rem;
-}
-
-.Contact .container {
-  position: relative;
-}
-
-
-/* Tabs */
-
-.main-container {
-  position: relative;
-}
-
-.menu-headline{
-  padding-top: 90px;
-}
-
- 
-
-/* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
-
