@@ -3,7 +3,7 @@
 
 * A Beautiful and Fully Responsive Animated FrontEnd Website of a restaurant named "Bitiyaa's".
 * It is made using Mobile-first approach for better overall responsiveness.
-* **Website Link** : [Bitiyaa's-Restaurant](https://03karan30.github.io/Bitiyaa-restaurant/)
+* **Website Link** : [Bitiyaa's-Restaurant](https://03karan30.github.io/Bitiyaa-Restaurant/)
 
 ## Screenshot
 
